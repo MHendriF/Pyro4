@@ -15,7 +15,7 @@ def main():
     print("\nThis program will calculate Prime Factorials of a bunch of random numbers.")
     print("The more workers you will start (on different cpus/cores/machines),")
     print("the faster you will get the complete list of results!\n")
-    with Pyro4.core.Proxy("PYRONAME:example.distributed.dispatcher") as dispatcher:
+    with Pyro4.core.Proxy("PYRO:127.0.0.1@localhost:59234") as dispatcher:
         placework(dispatcher)
         numbers = collectresults(dispatcher)
     printresults(numbers)

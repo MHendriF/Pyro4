@@ -47,5 +47,6 @@ class DispatcherQueue(object):
 # main program
 
 Pyro4.Daemon.serveSimple({
-    DispatcherQueue: "example.distributed.dispatcher"
-})
+    DispatcherQueue: "127.0.0.1"
+},
+ns = False)
