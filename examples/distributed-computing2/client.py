@@ -24,7 +24,7 @@ if __name__ == "__main__":
     print("(artificial delays are used to dramatize the differences in execution time)")
 
     print("\nCounting the words using a single counter...")
-    wordfreq(book, "PYRONAME:example.dc.wordcount.1")
+    wordfreq(book, "PYRO:example.dc.wordcount.1@localhost:61518")
 
     print("\nCounting words using multiple parallel counters...")
-    wordfreq(book, "PYRONAME:example.dc.dispatcher")
+    wordfreq(book, "PYRO:example.dc.wordcount.5@localhost:61518")

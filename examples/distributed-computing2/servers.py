@@ -1,3 +1,4 @@
+from __future__ import print_function
 import string
 import time
 from collections import Counter
@@ -83,6 +84,6 @@ if __name__ == "__main__":
             WordCounter(): "example.dc.wordcount.3",
             WordCounter(): "example.dc.wordcount.4",
             WordCounter(): "example.dc.wordcount.5",
-            Dispatcher:    "example.dc.dispatcher"
-        }, verbose=False
+            Dispatcher:    "127.0.0.1"
+        }, ns = False
     )
