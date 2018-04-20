@@ -42,7 +42,7 @@ def process(item):
 
 
 def main():
-    dispatcher = Pyro4.core.Proxy("PYRO:127.0.0.1@localhost:59234")
+    dispatcher = Pyro4.core.Proxy("PYRO:kel3.dispatcher@10.151.253.211:51732")
     print("This is worker %s" % WORKERNAME)
     print("getting work from dispatcher.")
     while True:

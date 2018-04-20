@@ -46,7 +46,15 @@ class DispatcherQueue(object):
 
 # main program
 
-Pyro4.Daemon.serveSimple({
-    DispatcherQueue: "127.0.0.1"
-},
-ns = False)
+# Pyro4.Daemon.serveSimple({
+#     DispatcherQueue: "example.distributed.dispatcher"
+# },
+# ns = False)
+
+custom_daemon = Pyro4.Daemon(host="10.151.253.211")    # some additional custom configuration
+Pyro4.Daemon.serveSimple(
+    {
+        DispatcherQueue: "kel3.dispatcher"
+      #  obj: DispatcherQueue
+    }, ns = False,
+    daemon = custom_daemon)

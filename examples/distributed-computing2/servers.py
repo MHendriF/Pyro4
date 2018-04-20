@@ -76,6 +76,7 @@ class Dispatcher(object):
 
 if __name__ == "__main__":
     print("Spinning up 5 wordcounters, and 1 dispatcher.")
+    custom_daemon = Pyro4.Daemon(host="10.151.253.211")  # some additional custom configuration
     Pyro4.config.SERVERTYPE = "thread"
     Pyro4.Daemon.serveSimple(
         {
@@ -84,6 +85,7 @@ if __name__ == "__main__":
             WordCounter(): "example.dc.wordcount.3",
             WordCounter(): "example.dc.wordcount.4",
             WordCounter(): "example.dc.wordcount.5",
-            Dispatcher:    "127.0.0.1"
+            Dispatcher:    "kel3.dispatcher2"
         }, ns = False
-    )
+        ,
+    daemon = custom_daemon)
